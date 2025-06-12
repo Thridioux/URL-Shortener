@@ -42,7 +42,7 @@ public class UrlShorteningServiceImpl implements UrlShorteningService {
     public ShortUrlResponse createShortUrl(CreateShortUrlRequest request) {
         String uuid = UUID.randomUUID().toString();
         String shortPath = uuid.substring(0, 8);
-        String shortUrl = appDomain + "/" + shortPath;
+        String shortUrl = appDomain + "/api/" + shortPath;
 
         ShortUrl entity = new ShortUrl(uuid, shortUrl, request.getLongUrl(), LocalDateTime.now());
         repository.save(entity);
@@ -72,7 +72,7 @@ public class UrlShorteningServiceImpl implements UrlShorteningService {
             return cached;
         }
 
-        ShortUrl entity = repository.findByShortUrl(appDomain + "/" + shortPath)
+        ShortUrl entity = repository.findByShortUrl(appDomain + "/api/" + shortPath)
                 .orElseThrow(() -> new NotFoundException("Short URL not found"));
         entity.setUsedCount(entity.getUsedCount() + 1);
         repository.save(entity);
