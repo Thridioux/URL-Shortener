@@ -1,0 +1,60 @@
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+# Log files
+*.log
+
+# JVM crash logs
+*.hprof
+hs_err_pid*
+
+# Mac OS
+.DS_Store
+
+# Compiled archives
+*.jar
+*.war
+*.ear
+
+# Maven build output directory (already covered by target/, but good to be explicit if used elsewhere)
+# build/
+
+# IntelliJ IDEA specific (already covered but ensuring common patterns)
+*.iml
+.idea/
+
+# Eclipse specific (already covered but ensuring common patterns)
+.project
+.classpath
+.settings/
