@@ -69,7 +69,7 @@ The overall flow involves a client sending a request, which is then processed by
 
 ### Create a Short URL
 
-- **POST** `/api/v1/urls/shorten`
+- **POST** `/api/shorten`
 - **Request Body** (JSON):
   ```json
   {
@@ -79,7 +79,7 @@ The overall flow involves a client sending a request, which is then processed by
 - **Success Response** (200 OK):
   ```json
   {
-    "shortUrl": "http://localhost:8080/generatedShortPath",
+    "shortUrl": "http://localhost:8080/api/091bbca4",
     "uuid": "unique-identifier-for-the-url"
   }
   ```
